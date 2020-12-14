@@ -7,3 +7,4 @@ A documentation of my experience using AI applied to audio
   
 ## Data and preprocessing
   
+https://github.com/wolverine3301/Audio-and-AI/blob/main/pics/waveform_post.png
