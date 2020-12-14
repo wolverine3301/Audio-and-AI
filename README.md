@@ -6,3 +6,4 @@ A documentation of my experience using AI applied to audio
   I'll be trying to make organised as cronological as possible, and assuming very little prior knowledge to digital signal processing.
   
 ## Data and preprocessing
+  
