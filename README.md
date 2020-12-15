@@ -19,7 +19,7 @@ Whatever file format you use, I would reccomend making sure they are raw and unc
   * **Channels** - so we all know what a stereo is? left and right channels recorded using 2 microphones , or just 2 of the same wave. If you graphed these you would have 2 sperated waves like the one above. Because these 2 wav forms are often very similar and litterally double the data to process, they are converted to a single MONO chennel by averageing, or other method.
   * **Duration** - simply how long in time the wave is
   
-  ## Basic preprocessing raw audio
+## Basic preprocessing raw audio
   
  while you can use raw aduio data for AI projects ,its often not because there are methods to extract more useful data from them.
  
@@ -44,7 +44,11 @@ Because of this the Mel Scale is typically used for music and speech data. There
  * Use mel spectrograms when dealing with human audio
  
 ## Feature extraction
-
+  Along with the STFT and MEL spectrogram there are some other features that can be useful.
+  * **zero crossing and zero crossing rate** - looking back at the raw wave, we can obtain the times and rate where the signal crosses 0. This typically has higher values for highly percussive sounds.
+  * **Spectral Centroid** - This indicates where the "centre of mass" for a sound is located and is calculated as the weighted mean of the frequencies present in the sound. If the frequencies in music are same throughout then spectral centroid would be around a centre and if there are high frequencies at the end of sound then the centroid would be towards its end. 
+  * **Spectral Rolloff** - Spectral rolloff is the frequency below which a specified percentage of the total spectral energy, ex. 50%, lies.
+  * **Mel-Frequency Cepstral Coefficients (MFCC)** - this is sort of a "spectrum-of-a-spectrum".T hey are a small set of features , usually 20, that further compress the mel-spectrogram, but reveal higher view of its shape. https://en.wikipedia.org/wiki/Mel-frequency_cepstrum
   
- 
- 
+  
+  
