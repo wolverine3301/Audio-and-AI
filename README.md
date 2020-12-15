@@ -1,4 +1,4 @@
-# Audio-and-AI
+# Audio and AI
 A documentation of my experience using AI applied to audio 
 
 ## Introduction
@@ -27,9 +27,12 @@ Whatever file format you use, I would reccomend making sure they are raw and unc
  **STFT** - short term fourier transform. This opperates an fft on a short time frame then shift the frame over slightly and does it again. this works like a video for audio basically. This will be used ALOT as a starting point for preprocessing audio.
 ### STFT main Parameters 
 this works alot like a camera, so to avoid getting into the specifics ill explain it like that.
+
   **n_fft** - the number off points to calculate an FFT, this basically how big the picture is. NOTE: must be a power of 2, commonly used: 2048,1024,512
+  
   **hop length** - how many fft points to shift the frame over. This is like the shutter speed and frames per second. 
-  <img src="https://github.com/wolverine3301/Audio-and-AI/commit/dfa91452dc0db41f5a1bfff45ba9827401ef5c7e" width="516" height="138">
+  
+<img src="https://github.com/wolverine3301/Audio-and-AI/blob/main/pics/wav-spec.png?raw=true" width="625" height="400">
   
   
  
