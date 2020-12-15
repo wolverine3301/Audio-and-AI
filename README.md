@@ -23,7 +23,7 @@ Whatever file format you use, I would reccomend making sure they are raw and unc
   
  while you can use raw aduio data for AI projects ,its often not because there are methods to extract more useful data from them.
  
- **FFT** - fast fourier transform this algorithm takes a time frame of a wave and returns the frquencies that compose the wave and their power. 
+ **FFT** - fast fourier transform this algorithm takes a time frame of a wave and returns the frquencies that compose the wave and their power. This is called a spectrogram.
  **STFT** - short term fourier transform. This opperates an fft on a short time frame then shift the frame over slightly and does it again. this works like a video for audio basically. This will be used ALOT as a starting point for preprocessing audio.
 ### STFT main Parameters 
 this works alot like a camera, so to avoid getting into the specifics ill explain it like that.
@@ -33,6 +33,14 @@ this works alot like a camera, so to avoid getting into the specifics ill explai
   **hop length** - how many fft points to shift the frame over. This is like the shutter speed and frames per second. 
   
 <img src="https://github.com/wolverine3301/Audio-and-AI/blob/main/pics/wav-spec.png?raw=true" width="625" height="400">
+
+### Mel scale spectrogram
+an fft can capture a wide range of frequencies, friquencies up to 1/2 of the sample rate. However human hearing, wdoesnt pick up many high frequencies and also scales more logrithmically, meaning it is more sensitive to low frequencies and typically notice changes if the loudness (decibles, db) and frequencies are doubled.
+Because of this the Mel Scale is typically used for music and speech data. There is no universal definition for this scale and so over-simplifying this, it particians the frequency bins(Hz) into new **n_mels** bins, a new scale HZ to Mels. it's basically the log transform of the FFT, kinda. There are 2 big pros to this. One, you get a spectrogram that better represents the data we care about. Second ,it reduces the amount of data the model will need to process.
+### basic preprocessing summary
+ * unless you have a reson not to, make sure to process audio as MONO channel
+ * always use uncompressed file formats
+ * depending on your needs adjust sample rate, hop length and fft points
   
   
  
