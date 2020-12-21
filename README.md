@@ -49,6 +49,6 @@ Because of this the Mel Scale is typically used for music and speech data. There
   * **Spectral Centroid** - This indicates where the "centre of mass" for a sound is located and is calculated as the weighted mean of the frequencies present in the sound. If the frequencies in music are same throughout then spectral centroid would be around a centre and if there are high frequencies at the end of sound then the centroid would be towards its end. 
   * **Spectral Rolloff** - Spectral rolloff is the frequency below which a specified percentage of the total spectral energy, ex. 50%, lies.
   * **Mel-Frequency Cepstral Coefficients (MFCC)** - this is sort of a "spectrum-of-a-spectrum".T hey are a small set of features , usually 20, that further compress the mel-spectrogram, but reveal higher view of its shape. https://en.wikipedia.org/wiki/Mel-frequency_cepstrum
-  
+  * **chroma frequencies** - This is a transofrm of the STFT into bins similar to the process of making the mel spectrogram, but this uses less bins, typically 12-48. These bins represent semitones / pitch in a musical octave
   
   
