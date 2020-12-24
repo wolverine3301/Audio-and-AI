@@ -1,4 +1,12 @@
 # Music Classification and Information retrival
+  In order to get to the more advanced projects, there needs to be a good understanding of the data, and features used. Since raw audio data doesn't usually yeild good results or is to large in most cases, and there is a large variety of features we can derive, I decided to run some experiments with this simple project. This will hopfully reveal some guidance and usful features for future projects.
 
+## Prerequisits
+* **Data Set** - I will be using the GTZAN data set, availible here http://marsyas.info/downloads/datasets.html . This data set contains 1000 ,30 second, song clips with 10 genres (blues,pop,ect), with 100 samples for each.
+* **Libraries** - **Librosa**, **numpy**, **pandas**, **sklearn**, **tensorflow / keras** are the main ones
+
+## Overview
+  The goals for this project will be to refine preprocessing techniques, and determine the most useful fetures to use. In addition, I will try to determine the best and smallest number of fetures needed to achieve above 80% accuracy. I will run one model with simple fetures, **(zero crossing rate, mean root-mean-square of energy, mean spectral bandwidth, mean spectral rolloff, mean spectral flatness)**. These values are calculated by frame so I will be useing the mean of each to represent the entire sample. This will act as a baseline if 80% is unattainable, and will also serve to see if these simpilar derived fetures are more significant than the ones going foward.For the first round of testing I will be using MFCC, chroma frequencies, mel frequencies, again take their averages for each frequency bin.
   
+  With the STFT ,audio is basically turned into sets of images (or one long image). Unlike classifying images of cat or dog, audio has a time element where one frame's properties are influnced by its neighboring frames. Two models come to mind for deaaling with images, and time, which are convolutional and recurrent neural nets. However upon some research and my own experimentation they do not perfrom very well in this particular problem. This could be from a variety of things but is likely due to the short duration and number of samples. For this dataset I found using a simplier dense feed foward net worked very well, sometimes even over fitting.
   
