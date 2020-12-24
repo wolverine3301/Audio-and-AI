@@ -16,7 +16,7 @@ Whatever file format you use, I would reccomend making sure they are raw and unc
  The important things to know about raw audio are as follows:
  
   * **Sample rate** - this is how many data points per second make up the wave form. CD quality sample rate is common which is 44100 Hz, so for one second of audio that's 44100 points of data. This can be and maybe should be, down sampled depending on what your working with.
-  * **Channels** - so we all know what a stereo is? left and right channels recorded using 2 microphones , or just 2 of the same wave. If you graphed these you would have 2 sperated waves like the one above. Because these 2 wav forms are often very similar and litterally double the data to process, they are converted to a single MONO chennel by averageing, or other method.
+  * **Channels** - so we all know what a stereo is? left and right channels recorded using 2 microphones , or just 2 of the same wave. If you graphed these you would have 2 sperated waves like the one above. Because these 2 wav forms are often very similar and double the data to process, they are converted to a single MONO chennel by averageing, or other method.
   * **Duration** - simply how long in time the wave is
   
 ## Basic preprocessing raw audio
