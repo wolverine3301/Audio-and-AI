@@ -34,4 +34,4 @@ There are 3 fully connected hidden layers each with relu activation, and the out
 
 ## Results
 
-  <img src="https://github.com/wolverine3301/Audio-and-AI/blob/main/Music_Classification_and_Information_Retrival/plots/music_genre_classification_Test1_accuracy_12.png?raw=true" width="800" height="800">
+  <img src="https://github.com/wolverine3301/Audio-and-AI/blob/main/Music_Classification_and_Information_Retrival/plots/music_genre_classification_Test1_accuracy_12.png?raw=true" width="1000" height="800">
