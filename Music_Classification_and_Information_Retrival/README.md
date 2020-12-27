@@ -31,3 +31,7 @@ Non-trainable params: 0
 _________________________________________________________________
   
 There are 3 fully connected hidden layers each with relu activation, and the output layer with a softmax activaton. I will be doing 3 rounds of test with 10, 15 and 20 epochs respectivly. The Training and validation will be set to 70:30 , so each will be trained on 700 examples and validated on 300. Each will be using "adam" as the optimizer function, and sparse categorical cross entropy as the loss/accuracy function. This is used because we are defining each example as only belonging to one genre/class.
+
+## Results
+
+  <img src="https://github.com/wolverine3301/Audio-and-AI/blob/main/pics/waveform_post.png" width="516" height="138">
